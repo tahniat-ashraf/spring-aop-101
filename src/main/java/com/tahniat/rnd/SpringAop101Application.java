@@ -1,4 +1,4 @@
-package com.bkash.rnd;
+package com.tahniat.rnd;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

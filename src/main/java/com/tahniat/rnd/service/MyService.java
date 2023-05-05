@@ -1,4 +1,4 @@
-package com.bkash.rnd.aspect;
+package com.tahniat.rnd.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -11,11 +11,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class MyService {
 
+
     public void  helloWorld(){
         log.info("Hello World");
     }
 
-    public void helloNoakhali(){
-        log.info("Hello Noakhali");
-    }
 }

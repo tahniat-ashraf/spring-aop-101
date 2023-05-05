@@ -1,7 +1,8 @@
-package com.bkash.rnd.controller;
+package com.tahniat.rnd.controller;
 
-import com.bkash.rnd.aspect.MyService;
-import org.springframework.stereotype.Controller;
+import com.tahniat.rnd.aspect.annotation.Idempotent;
+import com.tahniat.rnd.service.MyService;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,8 +21,9 @@ public class MyController {
         this.myService = myService;
     }
 
-    @GetMapping("/beforeTest")
-    public void testBefore(){
+    @GetMapping("/test")
+    @Idempotent
+    public void test(){
         myService.helloWorld();
     }
 }
