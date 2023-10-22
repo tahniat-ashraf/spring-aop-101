@@ -1,14 +1,20 @@
 kind: pipeline
 type: docker
-name: greeting
+name: default
 
 steps:
-  - name: en
-    image: alpine
-    commands:
-      - echo hello world
+  - name: check-commit-message
+    image: plugins/pre-commit
+    settings:
+      hooks: [commitlint]
 
-  - name: fr
-    image: alpine
+  - name: build
+    image: maven:3.8.5-jdk-11
     commands:
-      - echo bonjour monde
+      - mvn clean compile
+
+  - name: test
+    image: maven:3.8.5-jdk-11
+    commands:
+      - mvn test
+
