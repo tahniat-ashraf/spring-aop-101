@@ -7,7 +7,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 class SpringAop101ApplicationTests {
 
 	@Test
-	void contextLoads() {
+	void test() {
+		assert true == true;
 	}
 
 }
